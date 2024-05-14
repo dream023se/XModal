@@ -63,7 +63,7 @@ const XModal = () => {
             </div>
             <div>
               <label htmlFor="dob">Date of Birth:</label>
-              <input type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)} required />
+              <input required type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)}  />
             </div>
             <button className="submit-button" onClick={handleSubmit}>Submit</button>
           </div>
