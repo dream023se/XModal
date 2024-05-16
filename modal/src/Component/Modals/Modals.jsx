@@ -61,7 +61,7 @@ const XModal = () => {
               </div>
               <div>
                 <label htmlFor="phone">Phone:</label>
-                <input type="text" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <input type="number" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
               </div>
               <div>
                 <label htmlFor="dob">Date of Birth:</label>
