@@ -10,10 +10,10 @@ const XModal = () => {
 
   const handleSubmit = () => {
     
-    // if (!username || !email || !phone || !dob) {
-    //  alert('Please fill out all fields.');
-    //  return;
-    // }
+     if (!username || !email || !phone || !dob) {
+     alert('Please fill out all fields.');
+      return;
+     }
     if (!email.includes('@')) {
       alert('Invalid email. Please check your email address.');
       return;
