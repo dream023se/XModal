@@ -8,12 +8,13 @@ const XModal = () => {
   const [phone, setPhone] = useState('');
   const [dob, setDob] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     
-     if (!username || !email || !phone || !dob) {
-     alert('Please fill out all fields.');
+    if (!username || !email || !phone || !dob) {
+      alert('Please fill out all fields.');
       return;
-     }
+    }
     if (!email.includes('@')) {
       alert('Invalid email');
       return;
@@ -49,23 +50,25 @@ const XModal = () => {
         <div className="modal" onClick={handleModalClick}>
           <div className="modal-content">
             <h2>Fill Details</h2>
-            <div>
-              <label htmlFor="username">Username:</label>
-              <input  type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)}  />
-            </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input   type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div>
-              <label htmlFor="phone">Phone:</label>
-              <input type="text" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)}  />
-            </div>
-            <div>
-              <label htmlFor="dob">Date of Birth:</label>
-              <input  type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)}  />
-            </div>
-            <button className="submit-button" onClick={handleSubmit}>Submit</button>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="username">Username:</label>
+                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor="email">Email:</label>
+                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor="phone">Phone:</label>
+                <input type="text" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor="dob">Date of Birth:</label>
+                <input type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)} />
+              </div>
+              <button className="submit-button" type="submit">Submit</button>
+            </form>
           </div>
         </div>
       )}
