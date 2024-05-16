@@ -51,19 +51,19 @@ const XModal = () => {
             <h2>Fill Details</h2>
             <div>
               <label htmlFor="username">Username:</label>
-              <input required type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)}  />
+              <input  type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)}  />
             </div>
             <div>
               <label htmlFor="email">Email:</label>
-              <input required  type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input   type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div>
               <label htmlFor="phone">Phone:</label>
-              <input type="text" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+              <input type="text" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)}  />
             </div>
             <div>
               <label htmlFor="dob">Date of Birth:</label>
-              <input required type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)}  />
+              <input  type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)}  />
             </div>
             <button className="submit-button" onClick={handleSubmit}>Submit</button>
           </div>
