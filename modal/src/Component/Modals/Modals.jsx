@@ -11,10 +11,10 @@ const XModal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (!username || !email || !phone || !dob) {
-      alert('Please fill out all fields.');
-      return;
-    }
+    // if (!username || !email || !phone || !dob) {
+    //   alert('Please fill out all fields.');
+    //   return;
+    // }
     if (!email.includes('@')) {
       alert('Invalid email');
       return;
@@ -53,19 +53,19 @@ const XModal = () => {
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="username">Username:</label>
-                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <input required type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
               </div>
               <div>
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input required type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div>
                 <label htmlFor="phone">Phone:</label>
-                <input type="number" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <input required type="number" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
               </div>
               <div>
                 <label htmlFor="dob">Date of Birth:</label>
-                <input type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)} />
+                <input required type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)} />
               </div>
               <button className="submit-button" type="submit">Submit</button>
             </form>
